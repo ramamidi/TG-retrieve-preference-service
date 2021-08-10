@@ -14,8 +14,8 @@ Marketing preferences of customers. This microservice is  written in Java/Spring
 ### Steps to run locally:
 
 * Run ```gradle build```
-* cd into build/libs folder
-* Run java -jar RetrievePreference-1.0.0.jar
+* ```cd build/libs``` folder
+* Run java -jar retrieve-preference-service-1.0.0.jar
 
 ### Steps to run using docker:
 
@@ -43,14 +43,14 @@ docker run -p 8081:8081 --init -e SPRING_PROFILES_ACTIVE='demo' --rm --name retr
 
 ```
 docker logs <image_name>
-docker logs retrievepreference_app
+docker logs retrievepreference_service
 ```
 
 ## Kill container
 
 ```
 docker kill <container-id>
-docker rm retrievepreference_app
+docker rm retrievepreference_service
 ```
 
 

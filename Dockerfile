@@ -15,7 +15,7 @@ RUN gradle clean build -x test
 
 # install JRE
 FROM openjdk:16-oracle
-ENV ARTIFACT_NAME=retrievepreference-1.0.0.jar
+ENV ARTIFACT_NAME=retrieve-preference-service-1.0.0.jar
 ENV APP_HOME=/usr/app/
     
 WORKDIR $APP_HOME
