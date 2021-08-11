@@ -48,7 +48,7 @@ public class MarketingPreferenceServiceTest {
     }
 
     @Test
-    public void shouldAbleToFindOn() {
+    public void shouldAbleToFindOne() {
         // Prepare
         when(marketingPreferenceRepository.findById(eq(1))).thenReturn(Optional.of(new MarketingPreference()));
 
