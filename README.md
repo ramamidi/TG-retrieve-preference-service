@@ -14,7 +14,7 @@ microservice is written in Java/Spring Boot.
 
 * Run ```gradle build```
 * ```cd build/libs``` folder
-* Run ```java -jar retrieve-preference-service-1.0.0.jar```
+* Run  ```java -jar retrieve-preference-service-1.0.0.jar```
 
 # Run unit tests
 
@@ -55,6 +55,10 @@ docker logs retrievepreference_service
 docker kill <container-id>
 docker rm retrievepreference_service
 ```
+# How to test service
 
+* Install Postman or any rest client [Install postman](https://www.postman.com/downloads/)
+* Export this collection: [Collection](https://www.getpostman.com/collections/da45cf6ee3f0fef0f2ff)
+* eh voilà - The retrieve preference microservice is ready to use
 
 
