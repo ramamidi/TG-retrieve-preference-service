@@ -16,6 +16,10 @@ microservice is written in Java/Spring Boot.
 * ```cd build/libs``` folder
 * Run java -jar retrieve-preference-service-1.0.0.jar
 
+# Run unit tests
+
+```gradle test```
+
 # Steps to run using docker:
 
 * Install Docker [Install docker on your machine](https://www.docker.com/products/docker-desktop)

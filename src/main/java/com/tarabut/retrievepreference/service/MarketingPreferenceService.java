@@ -17,7 +17,7 @@ public interface MarketingPreferenceService {
      * @param pageable the pagination information.
      * @return the list of entities.
      */
-    public Page<MarketingPreference> findAll(Pageable pageable);
+    Page<MarketingPreference> findAll(Pageable pageable);
 
     /**
      * Get one MarketingPreference by id.
@@ -25,5 +25,5 @@ public interface MarketingPreferenceService {
      * @param id the id of the entity.
      * @return the entity.
      */
-    public Optional<MarketingPreference> findOne(Integer id);
+    Optional<MarketingPreference> findOne(Integer id);
 }
