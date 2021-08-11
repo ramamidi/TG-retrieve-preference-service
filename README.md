@@ -29,7 +29,7 @@ docker build -t retreivepreference:lts .
 ## Docker Run
 
 ```
-docker run -p 8081:8081 --init -e SPRING_PROFILES_ACTIVE='demo' --rm -d --name retrievepreference_service retreivepreference:lts
+docker run -p 8081:8081 --init -e SPRING_PROFILES_ACTIVE='demo' -d docker  --rm --name retrievepreference_service retreivepreference:lts
 ```
 
 ## Run non detach
