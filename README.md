@@ -1,15 +1,14 @@
 # Retrieve Marketing Preferences Microservice
 
-This is the retrieve preference microservice that is responsible to retrieve 
-Marketing preferences of customers. This microservice is  written in Java/Spring Boot.
+This is the retrieve preference microservice that is responsible to retrieve Marketing preferences of customers. This
+microservice is written in Java/Spring Boot.
 
-## Steps to run without docker
+# Steps to run without docker
 
-### Pre-requisites:
+## Pre-requisites:
 
-* Install Java
-* Install Gradle
-* Install Mysql
+* Install Java 16 [Install open jdk 16 on your machine](https://openjdk.java.net/)
+* Install Gradle [Install open jdk 16 on your machine](https://gradle.org/install/)
 
 ### Steps to run locally:
 
@@ -17,17 +16,17 @@ Marketing preferences of customers. This microservice is  written in Java/Spring
 * ```cd build/libs``` folder
 * Run java -jar retrieve-preference-service-1.0.0.jar
 
-### Steps to run using docker:
+# Steps to run using docker:
 
-* Install Docker
+* Install Docker [Install docker on your machine](https://www.docker.com/products/docker-desktop)
 
-# Docker Build
+## Docker Build
 
 ```
 docker build -t retreivepreference:lts .
 ```
 
-# Docker Run
+## Docker Run
 
 ```
 docker run -p 8081:8081 --init -e SPRING_PROFILES_ACTIVE='demo' --rm -d --name retrievepreference_service retreivepreference:lts

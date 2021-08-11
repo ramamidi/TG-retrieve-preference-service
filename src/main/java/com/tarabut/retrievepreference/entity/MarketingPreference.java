@@ -20,10 +20,11 @@ public class MarketingPreference {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-    private String email;
-    private String sms;
-    private String post;
+    private Integer id;
+    private Integer customerId;
+    private boolean email;
+    private boolean sms;
+    private boolean post;
 
     public MarketingPreference() {
     }
