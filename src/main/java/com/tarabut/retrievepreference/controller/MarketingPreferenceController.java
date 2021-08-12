@@ -58,7 +58,7 @@ public class MarketingPreferenceController {
      * the marketing-preferences, or with status {@code 404 (Not Found)}.
      */
     @GetMapping("/marketing-preferences/{id}")
-    public ResponseEntity<MarketingPreference> getQuestions(@PathVariable Integer id) {
+    public ResponseEntity<MarketingPreference> getOne(@PathVariable Integer id) {
         log.debug("REST request to get Questions : {}", id);
         MarketingPreference result = marketingPreferenceService.findOne(id).
                 orElseThrow(() -> new ResponseStatusException(NOT_FOUND, "Unable to find resource"));
