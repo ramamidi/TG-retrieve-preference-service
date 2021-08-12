@@ -51,9 +51,9 @@ public class MarketingPreferenceController {
     }
 
     /**
-     * {@code GET  /marketing-preferences/:id} : get the "id" marketing-preferences.
+     * {@code GET  /marketing-preferences/:id} : get marketing-preference id.
      *
-     * @param id the id of the marketing-preferences to retrieve.
+     * @param id the id of the marketing-preference to retrieve.
      * @return the {@link ResponseEntity} with status {@code 200 (OK)} and with body
      * the marketing-preferences, or with status {@code 404 (Not Found)}.
      */
