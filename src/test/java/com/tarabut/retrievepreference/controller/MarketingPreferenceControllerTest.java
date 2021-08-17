@@ -1,6 +1,8 @@
 package com.tarabut.retrievepreference.controller;
 
+import com.tarabut.retrievepreference.dto.GetMarketingPreferenceDTO;
 import com.tarabut.retrievepreference.entity.MarketingPreference;
+import com.tarabut.retrievepreference.service.MarketingPreferenceService;
 import com.tarabut.retrievepreference.service.impl.MarketingPreferenceServiceImpl;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -51,7 +53,7 @@ public class MarketingPreferenceControllerTest {
     }
 
     @Test
-    public void shouldAbleToGetMarketingPreferences() throws Exception {
+    public void shouldAbleToGetQuestions() throws Exception {
         // Arrange
         MarketingPreference marketingPreference = new MarketingPreference();
         marketingPreference.setId(1);
@@ -59,17 +61,17 @@ public class MarketingPreferenceControllerTest {
         marketingPreference.setEmail(true);
         marketingPreference.setPost(true);
         marketingPreference.setSms(true);
-        when(marketingPreferenceService.findOne(eq(1))).thenReturn(Optional.of(marketingPreference));
+        when(marketingPreferenceService.findOne(eq(1))).thenReturn(marketingPreference.toGetMarketingPreferenceDTO());
 
         // Act
         MvcResult mockMvcResult =
                 this.mockMvc.perform(MockMvcRequestBuilders.get("/marketing-preferences/1")).andExpect(status().isOk())
-                        .andExpect(content().contentType("application/json"))
-                        .andExpect(jsonPath("$.id", is(notNullValue())))
-                        .andExpect(jsonPath("$.id", is(1)))
-                        .andExpect(jsonPath("$.email", is(true)))
-                        .andExpect(jsonPath("$.post", is(true)))
-                        .andExpect(jsonPath("$.sms", is(true))).andReturn();
+                .andExpect(content().contentType("application/json"))
+                .andExpect(jsonPath("$.id", is(notNullValue())))
+                .andExpect(jsonPath("$.id", is(1)))
+                .andExpect(jsonPath("$.email", is(true)))
+                .andExpect(jsonPath("$.post", is(true)))
+                .andExpect(jsonPath("$.sms", is(true))).andReturn();
 
         // Assert
         Assertions.assertThat(mockMvcResult.getResponse().getStatus()).isEqualTo(200);
@@ -99,8 +101,9 @@ public class MarketingPreferenceControllerTest {
         marketingPreference.setEmail(true);
         marketingPreference.setPost(true);
         marketingPreference.setSms(true);
-        List<MarketingPreference> marketingPreferenceList = Arrays.asList(marketingPreference);
-        Page<MarketingPreference> page = new PageImpl<MarketingPreference>(marketingPreferenceList);
+        List<GetMarketingPreferenceDTO> marketingPreferenceList =
+                Arrays.asList(marketingPreference.toGetMarketingPreferenceDTO().get());
+        Page<GetMarketingPreferenceDTO> page = new PageImpl<>(marketingPreferenceList);
         when(marketingPreferenceService.findAll(any())).thenReturn(page);
 
         // Act

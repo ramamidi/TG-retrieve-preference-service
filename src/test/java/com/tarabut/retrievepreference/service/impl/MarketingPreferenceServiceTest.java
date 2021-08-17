@@ -1,8 +1,9 @@
-package com.tarabut.retrievepreference.service;
+package com.tarabut.retrievepreference.service.impl;
 
+import com.tarabut.retrievepreference.dto.GetMarketingPreferenceDTO;
 import com.tarabut.retrievepreference.entity.MarketingPreference;
 import com.tarabut.retrievepreference.repository.MarketingPreferenceRepository;
-import com.tarabut.retrievepreference.service.impl.MarketingPreferenceServiceImpl;
+import com.tarabut.retrievepreference.service.MarketingPreferenceService;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -37,23 +38,23 @@ public class MarketingPreferenceServiceTest {
         // Prepare
         Pageable pageable = mock(Pageable.class);
         List<MarketingPreference> marketingPreferenceList = Arrays.asList(new MarketingPreference());
-        Page<MarketingPreference> page = new PageImpl<MarketingPreference>(marketingPreferenceList);
+        Page<MarketingPreference> page = new PageImpl<>(marketingPreferenceList);
         when(marketingPreferenceRepository.findAll(eq(pageable))).thenReturn(page);
 
         // Act
-        Page<MarketingPreference> results = marketingPreferenceService.findAll(pageable);
+        Page<GetMarketingPreferenceDTO> results = marketingPreferenceService.findAll(pageable);
 
         // Assert
         assertThat(results.getTotalElements()).isEqualTo(1);
     }
 
     @Test
-    public void shouldAbleToFindOne() {
+    public void shouldAbleToFindOn() {
         // Prepare
         when(marketingPreferenceRepository.findById(eq(1))).thenReturn(Optional.of(new MarketingPreference()));
 
         // Act
-        Optional<MarketingPreference> optionalMarketingPreference = marketingPreferenceService.findOne(1);
+        Optional<GetMarketingPreferenceDTO> optionalMarketingPreference = marketingPreferenceService.findOne(1);
 
         // Assert
         assertThat(optionalMarketingPreference.isPresent()).isTrue();
@@ -65,7 +66,7 @@ public class MarketingPreferenceServiceTest {
         when(marketingPreferenceRepository.findById(eq(2))).thenReturn(Optional.empty());
 
         // Act
-        Optional<MarketingPreference> optionalMarketingPreference = marketingPreferenceService.findOne(1);
+        Optional<GetMarketingPreferenceDTO> optionalMarketingPreference = marketingPreferenceService.findOne(1);
 
         // Assert
         assertThat(optionalMarketingPreference.isPresent()).isFalse();

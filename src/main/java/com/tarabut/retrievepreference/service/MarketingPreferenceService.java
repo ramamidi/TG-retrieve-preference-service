@@ -1,5 +1,6 @@
 package com.tarabut.retrievepreference.service;
 
+import com.tarabut.retrievepreference.dto.GetMarketingPreferenceDTO;
 import com.tarabut.retrievepreference.entity.MarketingPreference;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -17,7 +18,7 @@ public interface MarketingPreferenceService {
      * @param pageable the pagination information.
      * @return the list of entities.
      */
-    Page<MarketingPreference> findAll(Pageable pageable);
+     Page<GetMarketingPreferenceDTO> findAll(Pageable pageable);
 
     /**
      * Get one MarketingPreference by id.
@@ -25,5 +26,5 @@ public interface MarketingPreferenceService {
      * @param id the id of the entity.
      * @return the entity.
      */
-    Optional<MarketingPreference> findOne(Integer id);
+     Optional<GetMarketingPreferenceDTO> findOne(Integer id);
 }
