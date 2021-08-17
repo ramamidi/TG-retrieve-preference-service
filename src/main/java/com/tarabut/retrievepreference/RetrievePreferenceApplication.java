@@ -35,7 +35,6 @@ public class RetrievePreferenceApplication {
     private ApiInfo getApiInfo() {
         return new ApiInfoBuilder()
                 .title("Retrieve Preference Service API")
-                .contact("abc@gmail.com")
                 .description("Services for Marketing Preference.")
                 .version("1.0.0").build();
     }
