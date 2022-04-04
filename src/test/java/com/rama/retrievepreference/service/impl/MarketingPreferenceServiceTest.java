@@ -1,9 +1,9 @@
-package com.tarabut.retrievepreference.service.impl;
+package com.rama.retrievepreference.service.impl;
 
-import com.tarabut.retrievepreference.dto.GetMarketingPreferenceDTO;
-import com.tarabut.retrievepreference.entity.MarketingPreference;
-import com.tarabut.retrievepreference.repository.MarketingPreferenceRepository;
-import com.tarabut.retrievepreference.service.MarketingPreferenceService;
+import com.rama.retrievepreference.dto.GetMarketingPreferenceDTO;
+import com.rama.retrievepreference.entity.MarketingPreference;
+import com.rama.retrievepreference.repository.MarketingPreferenceRepository;
+import com.rama.retrievepreference.service.MarketingPreferenceService;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

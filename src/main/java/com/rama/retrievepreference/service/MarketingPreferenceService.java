@@ -1,14 +1,13 @@
-package com.tarabut.retrievepreference.service;
+package com.rama.retrievepreference.service;
 
-import com.tarabut.retrievepreference.dto.GetMarketingPreferenceDTO;
-import com.tarabut.retrievepreference.entity.MarketingPreference;
+import com.rama.retrievepreference.dto.GetMarketingPreferenceDTO;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 import java.util.Optional;
 
 /**
- * Service interface for managing {@link com.tarabut.retrievepreference.entity.MarketingPreference}.
+ * Service interface for managing {@link com.rama.retrievepreference.entity.MarketingPreference}.
  */
 public interface MarketingPreferenceService {
 

@@ -1,6 +1,6 @@
-package com.tarabut.retrievepreference.repository;
+package com.rama.retrievepreference.repository;
 
-import com.tarabut.retrievepreference.entity.MarketingPreference;
+import com.rama.retrievepreference.entity.MarketingPreference;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**

@@ -5,7 +5,7 @@ plugins {
 }
 apply plugin: 'java'
 
-group = 'com.tarabut'
+group = 'com.rama'
 version = '1.0.0'
 sourceCompatibility = '16'
 

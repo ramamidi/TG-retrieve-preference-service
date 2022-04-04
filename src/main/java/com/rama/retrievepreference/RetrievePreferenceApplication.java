@@ -1,4 +1,4 @@
-package com.tarabut.retrievepreference;
+package com.rama.retrievepreference;
 
 import com.google.common.base.Predicates;
 import org.springframework.boot.SpringApplication;

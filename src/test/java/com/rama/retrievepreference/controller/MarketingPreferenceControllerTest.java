@@ -1,9 +1,8 @@
-package com.tarabut.retrievepreference.controller;
+package com.rama.retrievepreference.controller;
 
-import com.tarabut.retrievepreference.dto.GetMarketingPreferenceDTO;
-import com.tarabut.retrievepreference.entity.MarketingPreference;
-import com.tarabut.retrievepreference.service.MarketingPreferenceService;
-import com.tarabut.retrievepreference.service.impl.MarketingPreferenceServiceImpl;
+import com.rama.retrievepreference.dto.GetMarketingPreferenceDTO;
+import com.rama.retrievepreference.entity.MarketingPreference;
+import com.rama.retrievepreference.service.impl.MarketingPreferenceServiceImpl;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

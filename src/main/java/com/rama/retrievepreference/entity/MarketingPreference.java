@@ -1,13 +1,11 @@
-package com.tarabut.retrievepreference.entity;
+package com.rama.retrievepreference.entity;
 
-import com.tarabut.retrievepreference.dto.GetMarketingPreferenceDTO;
+import com.rama.retrievepreference.dto.GetMarketingPreferenceDTO;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-import org.springframework.data.domain.Page;
 import org.springframework.util.ObjectUtils;
 
-import javax.persistence.Converter;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
